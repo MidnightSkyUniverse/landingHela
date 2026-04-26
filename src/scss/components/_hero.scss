@@ -1,0 +1,135 @@
+.hela-hero {
+    min-height: 100vh;
+    background-color: $hela-purple;
+    background-image:
+        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(155, 93, 229, 0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(255, 158, 0, 0.08) 0%, transparent 60%);
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    align-items: center;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+    position: relative;
+
+    @media (max-width: 991px) {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-bottom: 3rem;
+    }
+}
+
+.hela-hero__text {
+    padding: 2rem 2.5rem 2rem 2.5rem;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 575px) {
+        padding: 2rem 1.25rem;
+    }
+}
+
+.hela-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $hela-amber;
+    margin-bottom: 1.5rem;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 2px;
+        background: $hela-amber;
+        border-radius: 2px;
+    }
+}
+
+.hela-hero__heading {
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+
+    em {
+        font-style: normal;
+        color: $hela-amber;
+    }
+}
+
+.hela-hero__sub {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+}
+
+.hela-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: $hela-amber;
+    color: $hela-purple;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    padding: 0.85rem 1.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    box-shadow: 0 4px 24px rgba(255, 158, 0, 0.3);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(255, 158, 0, 0.45);
+        background: #ffb030;
+        color: $hela-purple;
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.2s;
+    }
+
+    &:hover svg {
+        transform: translateX(3px);
+    }
+}
+
+.hela-hero__visual {
+    padding: 2rem 2.5rem 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @media (max-width: 991px) {
+        padding: 0 1.25rem 2rem;
+        overflow-x: auto;
+    }
+}
+
+// Fade-in animation for hero text
+.hela-hero__text > * {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: heroFadeUp 0.6s ease forwards;
+}
+.hela-hero__eyebrow  { animation-delay: 0.1s; }
+.hela-hero__heading  { animation-delay: 0.2s; }
+.hela-hero__sub      { animation-delay: 0.35s; }
+.hela-hero__cta      { animation-delay: 0.5s; }
+
+@keyframes heroFadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}

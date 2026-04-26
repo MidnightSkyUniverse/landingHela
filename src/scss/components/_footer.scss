@@ -1,0 +1,59 @@
+.hela-footer {
+    background: $hela-purple;
+    padding: 2.5rem 0;
+
+    .container-fluid {
+        padding: 0 2.5rem;
+
+        @media (max-width: 575px) {
+            padding: 0 1.25rem;
+        }
+    }
+}
+
+.hela-footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hela-footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+
+    .hela-nav__wordmark {
+        font-size: 1rem;
+        font-weight: 800;
+        color: rgba(255,255,255,0.7);
+        letter-spacing: -0.02em;
+    }
+}
+
+.hela-footer__copy {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    margin: 0;
+}
+
+.hela-footer__lang {
+    display: flex;
+    gap: 0.25rem;
+
+    a {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: rgba(255,255,255,0.35);
+        text-decoration: none;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        transition: color 0.2s;
+
+        &:hover { color: rgba(255,255,255,0.8); }
+        &.active { color: $hela-amber; }
+    }
+}

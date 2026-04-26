@@ -1,0 +1,68 @@
+block vars
+doctype html
+html(lang=lang)
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content=metaDescription)
+    meta(name='author', content='Hela')
+    meta(name='keywords', content=metaKeywords)
+    meta(name='robots', content='index, follow')
+
+    title= metaTitle
+
+    //- Canonical + hreflang
+    link(rel='canonical', href=canonical)
+    link(rel='alternate', hreflang='pl', href='https://helaapp.pl/')
+    link(rel='alternate', hreflang='en', href='https://helaapp.pl/en/')
+    link(rel='alternate', hreflang='x-default', href='https://helaapp.pl/')
+
+    //- Favicon
+    link(rel='icon', type='image/svg+xml', href=rootPath + 'assets/favicon.svg')
+    link(rel='icon', type='image/x-icon', href=rootPath + 'assets/favicon.ico')
+
+    //- Open Graph
+    meta(property='og:title', content=metaTitle)
+    meta(property='og:description', content=metaDescription)
+    meta(property='og:type', content='website')
+    meta(property='og:url', content=canonical)
+    meta(property='og:locale', content=ogLocale)
+
+    //- JSON-LD
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "Hela",
+            "url": "https://helaapp.pl",
+            "description": "#{jsonLdDescription}",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/ComingSoon"
+            },
+            "inLanguage": ["pl", "en"],
+            "areaServed": [
+              { "@type": "Country", "name": "Poland" },
+              { "@type": "Continent", "name": "Europe" }
+            ]
+          }
+        ]
+      }
+
+    include ../includes/css
+
+  body
+    //- Navigation
+    include ../includes/navbar
+
+    //- Page content
+    block content
+
+    //- Footer
+    include ../includes/footer
+
+    include ../includes/scripts

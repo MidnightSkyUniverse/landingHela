@@ -1,0 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-family-sans-serif;
+    color: $hela-text;
+    background: $hela-light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background: $hela-amber;
+    color: $hela-purple;
+}

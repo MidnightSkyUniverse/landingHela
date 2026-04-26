@@ -1,0 +1,241 @@
+// ── Shared section styles ──────────────────────────────────────────────
+
+.hela-section {
+    padding: 5rem 0;
+
+    @media (max-width: 767px) {
+        padding: 3.5rem 0;
+    }
+
+    .container {
+        max-width: 1100px;
+    }
+}
+
+.hela-section--light {
+    background: $hela-light;
+}
+
+.hela-section--white {
+    background: #fff;
+}
+
+.section-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $hela-amber;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: $hela-amber;
+        border-radius: 2px;
+    }
+}
+
+.section-heading {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: $hela-purple;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+}
+
+.section-sub {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: $hela-muted;
+    line-height: 1.7;
+    max-width: 560px;
+    margin-bottom: 3rem;
+}
+
+// ── Problem section ─────────────────────────────────────────────────────
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.problem-card {
+    background: #fff;
+    border: 1px solid $hela-border;
+    border-radius: $border-radius-xl;
+    padding: 2rem 1.75rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: $hela-amber;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+    }
+}
+
+.problem-card__num {
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(36, 0, 70, 0.06);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.04em;
+}
+
+.problem-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: $hela-purple;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+}
+
+.problem-card__text {
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: $hela-muted;
+    line-height: 1.65;
+    margin: 0;
+}
+
+// ── Industries section ──────────────────────────────────────────────────
+
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.industry-card {
+    border: 1px solid $hela-border;
+    border-radius: $border-radius-xl;
+    padding: 2rem 1.75rem;
+    background: #fff;
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+
+    &:hover {
+        border-color: rgba(255, 158, 0, 0.4);
+        box-shadow: 0 8px 32px rgba(36, 0, 70, 0.08);
+        transform: translateY(-3px);
+    }
+}
+
+.industry-card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 158, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.industry-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: $hela-purple;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+}
+
+.industry-card__text {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: $hela-muted;
+    line-height: 1.65;
+    margin: 0;
+}
+
+// ── Contact / CTA section ────────────────────────────────────────────────
+
+.hela-contact {
+    background: $hela-purple;
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+            radial-gradient(ellipse 60% 60% at 50% 100%, rgba(155,93,229,0.25) 0%, transparent 70%),
+            radial-gradient(ellipse 30% 40% at 80% 20%, rgba(255,158,0,0.06) 0%, transparent 60%);
+        pointer-events: none;
+    }
+}
+
+.hela-contact__label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $hela-amber;
+    margin-bottom: 1rem;
+}
+
+.hela-contact__heading {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+}
+
+.hela-contact__sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto 2.5rem;
+}
+
+.hela-contact__email {
+    display: inline-block;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    color: $hela-amber;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    border-bottom: 2px solid rgba(255,158,0,0.3);
+    padding-bottom: 2px;
+    transition: border-color 0.2s, color 0.2s;
+
+    &:hover {
+        color: #ffb030;
+        border-color: $hela-amber;
+    }
+}

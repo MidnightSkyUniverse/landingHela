@@ -1,0 +1,13 @@
+.text-amber   { color: $hela-amber !important; }
+.text-muted-hela { color: $hela-muted !important; }
+.bg-hela-purple { background-color: $hela-purple !important; }
+.bg-hela-light  { background-color: $hela-light !important; }
+
+.section-rule {
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    background: $hela-amber;
+    border: none;
+    margin: 0.75rem 0 1.5rem;
+}

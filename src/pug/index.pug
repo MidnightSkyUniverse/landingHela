@@ -1,0 +1,133 @@
+extends layouts/base
+
+block vars
+  - var lang             = 'pl'
+  - var rootPath         = ''
+  - var canonical        = 'https://helaapp.pl/'
+  - var ogLocale         = 'pl_PL'
+  - var metaTitle        = 'Hela — Inteligentne harmonogramowanie zespołów'
+  - var metaDescription  = 'Hela automatyzuje tworzenie harmonogramów zmian dla firm z branży odpadów, budownictwa i ochrony zdrowia. Koniec z Excelem.'
+  - var metaKeywords     = 'harmonogramowanie, harmonogram zmian, planowanie zmian, gospodarka odpadami, budownictwo, szpital, scheduling software, Polska'
+  - var jsonLdDescription = 'Automatyczne harmonogramowanie zmian dla złożonych operacji w Polsce.'
+
+block content
+  //- ── HERO ───────────────────────────────────────────────────────────
+  section.hela-hero
+    .hela-hero__text
+      p.hela-hero__eyebrow Algorytmiczne harmonogramowanie
+      h1.hela-hero__heading
+        | Harmonogramy,
+        br
+        em które działają.
+      p.hela-hero__sub Automatyczne planowanie zmian dla złożonych operacji. Uwzględniamy prawo pracy, kwalifikacje i dostępność — Ty tylko zatwierdzasz.
+      a.hela-hero__cta(href='mailto:hela@nexi8.pl')
+        | Napisz do nas
+        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2.5', stroke-linecap='round', stroke-linejoin='round')
+          path(d='M5 12h14M12 5l7 7-7 7')
+
+    .hela-hero__visual
+      //- Schedule visualization — pure CSS/HTML
+      //- In the future, replace .sched with an actual screenshot
+      .sched
+        //- Corner
+        .sched__corner
+        //- Time headers (12 × 2h slots, starting 6AM)
+        .sched__th 06
+        .sched__th 08
+        .sched__th 10
+        .sched__th 12
+        .sched__th 14
+        .sched__th 16
+        .sched__th 18
+        .sched__th 20
+        .sched__th 22
+        .sched__th 00
+        .sched__th 02
+        .sched__th 04
+
+        //- Row 1: TR-01 — amber 06–14, violet 22–06
+        .sched__label TR-01
+        .sched__block.sched__block--a(style='grid-column:2/6; --d:0.15s') ZMIANA A
+        .sched__block.sched__block--b(style='grid-column:10/14; --d:0.8s') ZMIANA B
+
+        //- Row 2: TR-02 — teal 08–16
+        .sched__label TR-02
+        .sched__block.sched__block--c(style='grid-column:3/7; --d:0.25s') ZMIANA C
+
+        //- Row 3: TR-03 — teal 06–14, amber 14–22
+        .sched__label TR-03
+        .sched__block.sched__block--c(style='grid-column:2/6; --d:0.35s') ZMIANA C
+        .sched__block.sched__block--a(style='grid-column:6/10; --d:0.95s') ZMIANA A
+
+        //- Row 4: BD-01 — amber 06–14
+        .sched__label BD-01
+        .sched__block.sched__block--a(style='grid-column:2/6; --d:0.45s') ZMIANA A
+
+        //- Row 5: BD-02 — violet 14–22
+        .sched__label BD-02
+        .sched__block.sched__block--b(style='grid-column:6/10; --d:1.05s') ZMIANA B
+
+        //- Row 6: SZ-01 — full 24h coverage (three shifts)
+        .sched__label SZ-01
+        .sched__block.sched__block--a(style='grid-column:2/6; --d:0.55s') ZMIANA A
+        .sched__block.sched__block--b(style='grid-column:6/10; --d:0.9s') ZMIANA B
+        .sched__block.sched__block--c(style='grid-column:10/14; --d:1.15s') ZMIANA C
+
+        //- Row 7: SZ-02 — amber 10–18
+        .sched__label SZ-02
+        .sched__block.sched__block--a(style='grid-column:4/8; --d:0.65s') ZMIANA A
+
+        //- Row 8: SZ-03 — violet 08–20 (long)
+        .sched__label SZ-03
+        .sched__block.sched__block--b(style='grid-column:3/9; --d:0.75s') ZMIANA B
+
+        //- Hela badge
+        .sched__badge hela
+
+  //- ── PROBLEM ────────────────────────────────────────────────────────
+  section.hela-section.hela-section--light
+    .container
+      p.section-label Problem
+      h2.section-heading Excel nie skaluje się.
+      p.section-sub Przy kilkudziesięciu pracownikach, rotacyjnych zmianach i zmiennej dostępności zasobów — ręczne planowanie przestaje działać.
+      .problem-grid
+        .problem-card
+          .problem-card__num 01
+          h3.problem-card__title Konflikty, które kosztują
+          p.problem-card__text Jeden błąd w harmonogramie — dwóch pracowników na tej samej trasie, brakujące kwalifikacje, naruszenie norm czasu pracy — generuje realne straty.
+        .problem-card
+          .problem-card__num 02
+          h3.problem-card__title Godziny tracone na planowanie
+          p.problem-card__text Kierownik spędza poniedziałkowy poranek układając puzzle zamiast zarządzać operacjami. Każda zmiana dostępności pracownika resetuje cały plan.
+        .problem-card
+          .problem-card__num 03
+          h3.problem-card__title Złożoność rośnie nieliniowo
+          p.problem-card__text Przy 20 pracownikach Excel jeszcze działa. Przy 60, na trzech obiektach, z podwykonawcami — przestaje. Scala nie obsługuje zależności.
+
+  //- ── FOR WHOM ───────────────────────────────────────────────────────
+  section.hela-section.hela-section--white
+    .container
+      p.section-label Dla kogo
+      h2.section-heading Operacje, które nie tolerują błędów.
+      p.section-sub Hela jest projektowana z myślą o branżach, gdzie złożone harmonogramy mają realne konsekwencje operacyjne.
+      .industry-grid
+        .industry-card
+          .industry-card__icon 🚛
+          h3.industry-card__title Gospodarka odpadami
+          p.industry-card__text Wielozmianowe trasy, rotacja ekip, wymagania dotyczące pojazdów i uprawnień kierowców. Harmonogram musi uwzględniać częstotliwość odbiorów i strefy.
+        .industry-card
+          .industry-card__icon 🏗️
+          h3.industry-card__title Budownictwo
+          p.industry-card__text Ekipy na wielu budowach jednocześnie, zróżnicowane kwalifikacje, zmienna dostępność podwykonawców. Opóźnienie jednej ekipy blokuje kolejne etapy.
+        .industry-card
+          .industry-card__icon 🏥
+          h3.industry-card__title Ochrona zdrowia
+          p.industry-card__text Harmonogramy oddziałów, minimalne normy zatrudnienia na zmianie, dyżury specjalistów. Każde naruszenie to ryzyko prawne i kliniczne.
+
+  //- ── CONTACT ────────────────────────────────────────────────────────
+  section.hela-contact
+    .container
+      p.hela-contact__label Kontakt
+      h2.hela-contact__heading Rozmawiamy.
+      p.hela-contact__sub Jesteśmy na etapie rozmów z pierwszymi klientami. Jeśli zarządzasz złożonymi harmonogramami i chcesz podzielić się swoimi wyzwaniami — napisz.
+      a.hela-contact__email(href='mailto:hela@nexi8.pl') hela@nexi8.pl

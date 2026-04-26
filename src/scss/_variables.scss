@@ -1,0 +1,21 @@
+// Brand
+$hela-purple:  #240046;
+$hela-amber:   #FF9E00;
+$hela-violet:  #9B5DE5;
+$hela-teal:    #00C9B1;
+$hela-light:   #FAFAF9;
+$hela-text:    #1a0035;
+$hela-muted:   #6b5882;
+$hela-border:  rgba(36, 0, 70, 0.08);
+
+// Bootstrap overrides
+$primary:   $hela-purple;
+$secondary: $hela-amber;
+
+$font-family-sans-serif: 'Plus Jakarta Sans', sans-serif;
+$font-weight-light: 300;
+$enable-negative-margins: true;
+
+$border-radius:    6px;
+$border-radius-lg: 10px;
+$border-radius-xl: 16px;

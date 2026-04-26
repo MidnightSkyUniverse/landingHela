@@ -1,0 +1,120 @@
+extends ../layouts/base
+
+block vars
+  - var lang             = 'en'
+  - var rootPath         = '../'
+  - var canonical        = 'https://helaapp.pl/en/'
+  - var ogLocale         = 'en_GB'
+  - var metaTitle        = 'Hela — Intelligent Scheduling for Complex Teams'
+  - var metaDescription  = 'Hela automates shift scheduling for waste management, construction, and healthcare. No more spreadsheets — we handle labor law, qualifications, and availability.'
+  - var metaKeywords     = 'scheduling software, shift planning, workforce scheduling, waste management, construction, hospital scheduling, Europe'
+  - var jsonLdDescription = 'Automated shift scheduling for complex operations across Europe.'
+
+block content
+  //- ── HERO ───────────────────────────────────────────────────────────
+  section.hela-hero
+    .hela-hero__text
+      p.hela-hero__eyebrow Algorithmic scheduling
+      h1.hela-hero__heading
+        | Schedules that
+        br
+        em actually work.
+      p.hela-hero__sub Automated shift planning for complex operations. We handle labor law, qualifications, and availability — you just approve.
+      a.hela-hero__cta(href='mailto:hela@nexi8.pl')
+        | Get in touch
+        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2.5', stroke-linecap='round', stroke-linejoin='round')
+          path(d='M5 12h14M12 5l7 7-7 7')
+
+    .hela-hero__visual
+      .sched
+        .sched__corner
+        .sched__th 06
+        .sched__th 08
+        .sched__th 10
+        .sched__th 12
+        .sched__th 14
+        .sched__th 16
+        .sched__th 18
+        .sched__th 20
+        .sched__th 22
+        .sched__th 00
+        .sched__th 02
+        .sched__th 04
+
+        .sched__label RT-01
+        .sched__block.sched__block--a(style='grid-column:2/6; --d:0.15s') SHIFT A
+        .sched__block.sched__block--b(style='grid-column:10/14; --d:0.8s') SHIFT B
+
+        .sched__label RT-02
+        .sched__block.sched__block--c(style='grid-column:3/7; --d:0.25s') SHIFT C
+
+        .sched__label RT-03
+        .sched__block.sched__block--c(style='grid-column:2/6; --d:0.35s') SHIFT C
+        .sched__block.sched__block--a(style='grid-column:6/10; --d:0.95s') SHIFT A
+
+        .sched__label BD-01
+        .sched__block.sched__block--a(style='grid-column:2/6; --d:0.45s') SHIFT A
+
+        .sched__label BD-02
+        .sched__block.sched__block--b(style='grid-column:6/10; --d:1.05s') SHIFT B
+
+        .sched__label WD-01
+        .sched__block.sched__block--a(style='grid-column:2/6; --d:0.55s') SHIFT A
+        .sched__block.sched__block--b(style='grid-column:6/10; --d:0.9s') SHIFT B
+        .sched__block.sched__block--c(style='grid-column:10/14; --d:1.15s') SHIFT C
+
+        .sched__label WD-02
+        .sched__block.sched__block--a(style='grid-column:4/8; --d:0.65s') SHIFT A
+
+        .sched__label WD-03
+        .sched__block.sched__block--b(style='grid-column:3/9; --d:0.75s') SHIFT B
+
+        .sched__badge hela
+
+  //- ── PROBLEM ────────────────────────────────────────────────────────
+  section.hela-section.hela-section--light
+    .container
+      p.section-label The problem
+      h2.section-heading Spreadsheets don't scale.
+      p.section-sub With dozens of employees, rotating shifts, and fluctuating resource availability — manual planning breaks down fast.
+      .problem-grid
+        .problem-card
+          .problem-card__num 01
+          h3.problem-card__title Conflicts that cost money
+          p.problem-card__text One scheduling mistake — two crews on the same route, a missing certification, a labor law violation — generates real operational losses.
+        .problem-card
+          .problem-card__num 02
+          h3.problem-card__title Hours lost to planning
+          p.problem-card__text Your operations manager spends Monday mornings solving puzzles instead of managing operations. Every change in availability resets the entire plan.
+        .problem-card
+          .problem-card__num 03
+          h3.problem-card__title Complexity grows non-linearly
+          p.problem-card__text At 20 employees, a spreadsheet still works. At 60, across three sites, with subcontractors — it breaks. Excel doesn't handle dependencies.
+
+  //- ── FOR WHOM ───────────────────────────────────────────────────────
+  section.hela-section.hela-section--white
+    .container
+      p.section-label Who it's for
+      h2.section-heading Operations that can't afford mistakes.
+      p.section-sub Hela is built for industries where complex schedules have real operational consequences.
+      .industry-grid
+        .industry-card
+          .industry-card__icon 🚛
+          h3.industry-card__title Waste Management
+          p.industry-card__text Multi-shift routes, crew rotation, vehicle and driver certification requirements. The schedule must account for collection frequency and service zones.
+        .industry-card
+          .industry-card__icon 🏗️
+          h3.industry-card__title Construction
+          p.industry-card__text Crews across multiple sites simultaneously, varied qualifications, fluctuating subcontractor availability. A delayed crew blocks every downstream phase.
+        .industry-card
+          .industry-card__icon 🏥
+          h3.industry-card__title Healthcare
+          p.industry-card__text Ward schedules, minimum staffing standards per shift, specialist on-call rotations. Every violation is a legal and clinical risk.
+
+  //- ── CONTACT ────────────────────────────────────────────────────────
+  section.hela-contact
+    .container
+      p.hela-contact__label Contact
+      h2.hela-contact__heading Let's talk.
+      p.hela-contact__sub We're in early conversations with our first customers. If you manage complex schedules and want to share your challenges — reach out.
+      a.hela-contact__email(href='mailto:hela@nexi8.pl') hela@nexi8.pl

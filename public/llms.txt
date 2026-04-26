@@ -1,0 +1,34 @@
+# Hela
+
+> Inteligentne harmonogramowanie dla złożonych operacji / Intelligent scheduling for complex operations
+
+Hela to oprogramowanie automatyzujące tworzenie harmonogramów zmian dla firm zarządzających złożonymi zasobami ludzkimi i operacyjnymi.
+
+Hela is a scheduling software that automates shift and route planning for companies managing complex human and operational resources.
+
+## Co robi Hela / What Hela does
+
+- Automatycznie generuje optymalne harmonogramy zmian uwzględniając prawo pracy, kwalifikacje pracowników i dostępność zasobów
+- Automatically generates optimal shift schedules taking into account labor law, employee qualifications, and resource availability
+- Eliminuje konflikty harmonogramowe (nakładające się zmiany, brakujące kwalifikacje, naruszenia prawa pracy)
+- Eliminates scheduling conflicts (overlapping shifts, missing qualifications, labor law violations)
+- Obsługuje harmonogramy wielozmianowe, rotacyjne i wielolokalizacyjne
+- Handles multi-shift, rotating, and multi-location schedules
+
+## Dla kogo / Who it's for
+
+- Firmy z branży gospodarki odpadami (wielozmianowe trasy, rotacja ekip, wymagania dotyczące pojazdów)
+- Waste management companies (multi-shift routes, crew rotation, vehicle requirements)
+- Firmy budowlane (ekipy na wielu budowach, zróżnicowane kwalifikacje, podwykonawcy)
+- Construction companies (crews across multiple sites, varied qualifications, subcontractors)
+- Placówki ochrony zdrowia (harmonogramy oddziałów, normy zatrudnienia, dyżury specjalistów)
+- Healthcare facilities (ward schedules, staffing standards, specialist on-call rotations)
+
+## Status
+
+Wczesny etap rozwoju. Prowadzimy rozmowy z pierwszymi klientami.
+Early stage. We are in conversations with our first customers.
+
+## Kontakt / Contact
+
+hela@nexi8.pl
