@@ -13,4 +13,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://helaapp.pl/sitemap.xml
+Sitemap: https://algority.pl/sitemap.xml
