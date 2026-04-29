@@ -1,10 +1,10 @@
-# Hela
+# Algority
 
 > Inteligentne harmonogramowanie dla złożonych operacji / Intelligent scheduling for complex operations
 
-Hela to oprogramowanie automatyzujące tworzenie harmonogramów zmian dla firm zarządzających złożonymi zasobami ludzkimi i operacyjnymi.
+Algority to oprogramowanie automatyzujące tworzenie harmonogramów zmian dla firm zarządzających złożonymi zasobami ludzkimi i operacyjnymi.
 
-Hela is a scheduling software that automates shift and route planning for companies managing complex human and operational resources.
+Algority is a scheduling software that automates shift and route planning for companies managing complex human and operational resources.
 
 ## Co robi Hela / What Hela does
 

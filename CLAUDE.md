@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 **Hela** — B2B SaaS landing page for algorithmic scheduling software targeting waste management, construction, and healthcare companies in Poland. Primary language: Polish (`/`). English version at `/en/`. No analytics, no cookie banner, no booking system. CTA is a visible email address.
 
 Domain: `algority.pl`
-Placeholder email: `kontakt@helaapp.pl` — update before going live.
+Emails: Polish `kontakt@algority.pl`, English `contact@algority.pl`.
 
 ## Stack
 
